@@ -381,7 +381,6 @@ def HASSLE():
         list_client2indices_unlabeled[idx] = list_one_unlabeled
     show_clients_data_distribution(data_local_training, list_client2indices_labeled,
                                    list_client2indices_unlabeled, args.num_classes)
-    # 两个分支
     global_model = Global()
     local_model = Local_Model()
 
