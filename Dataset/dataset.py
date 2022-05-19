@@ -9,8 +9,6 @@ from torchvision import datasets
 from torchvision import transforms
 from Dataset.sample_dirichlet import clients_indices, clients_indices_unlabel
 
-
-# 得到是索引
 def classify_label(dataset, num_classes: int):
     list1 = [[] for _ in range(num_classes)]
     for idx, datum in enumerate(dataset):
