@@ -309,32 +309,3 @@ class ResNet_cifar(ResNetBase):
 
         return feature, y
 
-
-if __name__ == '__main__':
-    model = ResNet_cifar(resnet_size=8, scaling=4, save_activations=False,
-                         group_norm_num_groups=None, freeze_bn=False, freeze_bn_affine=False, num_classes=10)
-    # model.to('cuda')
-    # model.train()
-    # for name, p in model.named_parameters():
-    #     if name.startswith('conv1'):
-    #         p.requires_grad = False
-    #     if name.startswith('bn1'):
-    #         p.requires_grad = False
-    #     if name.startswith('layer1'):
-    #         p.requires_grad = False
-    #     if name.startswith('layer2'):
-    #         p.requires_grad = False
-    #     if name.startswith('layer3'):
-    #         p.requires_grad = False
-    # for name, parameters in model.named_parameters():
-    #     print(name, ':', parameters.size())
-    # params = filter(lambda p: p.requires_grad, model.parameters())
-    # optimizer = torch.optim.SGD(prams, lr=0.1, momentum=0.9, weight_decay=0.0005)
-    model = model.to('cuda')
-   #  print(summary(model, (3, 32, 32)))
-    print(model)
-
-# 1227594
-# 78042
-# 691834
-
